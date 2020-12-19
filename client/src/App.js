@@ -12,7 +12,7 @@ const Homepage = lazy(()=> import('./pages/homepage/homepage.component'));
 const ShopPage = lazy(()=>import('./pages/shop-page/shoppage.component'));
 const LogIn =  lazy(()=>import('./pages/LogIn/login.component'));
 const Checkout =  lazy(()=>import('./pages/Checkout/checkout.component'));
-
+const Search = lazy(()=> import('./components/Search/search.component'));
 const App = ({checkUserSession,currentUser}) => {
   useEffect(()=>{
     checkUserSession();
@@ -26,10 +26,13 @@ const App = ({checkUserSession,currentUser}) => {
         <Route exact={true} path='/' component={Homepage}></Route>
         
         <Route  path='/shop' component={ShopPage} />
+        <Route exact path='/search' component={Search}></Route>
         <Route exact path='/checkout' component={Checkout}></Route>
         <Route exact path='/signin' render={()=>currentUser?
       ( <Redirect to='/'></Redirect> ) : <LogIn></LogIn>  
       } />
+     
+    
         </Suspense>
         </ErrorBoundary>
       </div>

@@ -27,6 +27,9 @@ const Header = ({currentUser,hidden,signOutStart}) => (
                 <Link className='option' to='/signin'>Sign In</Link>)
 
             }
+            <Link className='option' to='/search'>
+                Search
+            </Link>
             <CartIcon></CartIcon>
         </div>
         {
