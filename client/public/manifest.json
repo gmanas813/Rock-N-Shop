@@ -1,0 +1,30 @@
+{
+  "short_name": "RocknShop App",
+  "name": "Create React App Sample",
+  "icons": [
+   
+
+    {
+      "src":"ms-icon-310x310.png",
+      "sizes":"512x512",
+      "type":"image/png"
+    }
+    ,
+  
+    {
+      "src":"ms-icon-150x150.png",
+      "sizes":"150x150",
+      "type":"image/png"
+    }
+    ,{
+      "src":"ms-icon-70x70.png",
+      "sizes":"70x70",
+      "type":"image/png"
+    }
+    
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
