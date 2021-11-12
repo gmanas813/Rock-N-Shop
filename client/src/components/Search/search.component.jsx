@@ -24,7 +24,7 @@ const Search = ({collections,fetchCollToStart}) => {
         {
          search ?( 
          <React.Fragment>
-                     <h2>Here are results</h2> 
+                   
                     
                      <div className="collection-preview">
   

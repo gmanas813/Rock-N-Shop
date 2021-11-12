@@ -12,23 +12,26 @@ import {selectCurrentUser} from '../../Redux/UserReducer/user.selector';
 import { selectCartHidden } from '../../Redux/Cart/cart.selectors';
 import {signOutStart} from '../../Redux/UserReducer/user.actions';
 const Header = ({currentUser,hidden,signOutStart}) => (
+
     <div className="header">
         <Link className="logo-container" to='/'>
            <img src={Logo} className='logo'></img>
         </Link>
         <div className='options'>
-            <Link className='option' to='/shop'>
+            <Link className='option' to='/shop'><button type="button" class="btn btn-dark">
                 BUY
+                </button>
             </Link>
             {
                 currentUser?(
-            <Link className='option' onClick={ signOutStart   }> Sign Out </Link>)
+            <Link className='option' onClick={ signOutStart   }> <button type="button" class="btn btn-dark"> Sign Out </button> </Link>)
                 :(
-                <Link className='option' to='/signin'>Sign In</Link>)
+                <Link className='option' to='/signin'><button type="button" class="btn btn-dark">Sign In </button></Link>)
 
             }
-            <Link className='option' to='/search'>
+            <Link className='option' to='/search'> <button type="button" class="btn btn-dark">
                 Search
+                </button>
             </Link>
             <CartIcon></CartIcon>
         </div>
